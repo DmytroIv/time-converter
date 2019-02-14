@@ -1,0 +1,113 @@
+body {
+  font-family: Calibri, sans-serif;
+  font-size: 20px;
+}
+
+.forms-wrapper {
+  max-width: 700px;
+  margin: 10px auto 50px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.form-add, .form-delete {
+  border-radius: 3px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  opacity: 0.5;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.form-add:hover, .form-delete:hover {
+  cursor: pointer;
+  opacity: 1;
+  color: #FFFFFF;
+}
+
+.form-add:after, .form-delete:after {
+  font-size: 2em;
+  line-height: 0;
+  position: absolute;
+  left: 5px;
+  top: 13px;
+}
+
+.form-add {
+  background-color: darkgreen;
+}
+
+.form-add:after {
+  content: '+';
+}
+
+.form-delete {
+  background-color: darkred;
+}
+
+.form-delete:after {
+  content: '_';
+  top: -3px;
+}
+
+.time-form {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 25px 0;
+  position: relative;
+  padding: 10px;
+}
+
+.time-form h5 {
+  font-size: 1.25em;
+  margin: 0;
+  width: 15%;
+  padding-right: 10px;
+}
+
+.time-form label {
+  font-size: 0.7em;
+  color: #777777;
+  text-align: right;
+  margin-bottom: -8px;
+  position: relative;
+  z-index: 1;
+}
+
+.time-form label span {
+  background-color: #fff;
+  padding: 3px;
+  margin-right: 10px;
+}
+
+.time-form input[type="number"] {
+  padding: 7px 15px;
+  font-size: 0.8em;
+  width: 100px;
+}
+
+.time-form.active {
+  box-shadow: 3px 3px 5px -1px rgba(100, 100, 100, 0.5);
+}
+
+.time-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 10px;
+}
+
+.time-control {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  margin-right: 10px;
+}
