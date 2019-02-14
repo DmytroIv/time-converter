@@ -13,21 +13,50 @@
         }
 
         if(e.target.classList.contains('form-delete')) {
-            deleteForm();
+            deleteForm(e.target);
         }
 
     });
 
     function createForm() {
 
-        return 3;
+        const template = document.querySelector('#form-template'),
+            form = document.importNode(template.content, true),
+            fragment = document.createDocumentFragment();
+
+        let formNumber = formsHolder.querySelectorAll('.time-form').length;
+
+        form.querySelectorAll('[id], [for]').forEach((item, i) => {
+            changeTemplateElementsIds(item, formNumber);
+        });
+
+        fragment.appendChild(form);
+
+        return fragment;
     }
 
-    function deleteForm() {
+    function changeTemplateElementsIds(item, formNumber) {
+        const attrId = item.getAttribute('id');
+        const attrFor = item.getAttribute('for');
 
+        if(attrId) {
+            item.setAttribute('id', attrId + '_' + formNumber);
+        }
+
+        if(attrFor) {
+            item.setAttribute('for', attrFor + '_' + formNumber );
+        }
     }
 
+    function deleteForm(element) {
+        const form = element && element.closest('.time-form');
+        if(form) {
+            form.remove();
+        }
+    }
 
+    function writeDataToLocalStorage() {
 
+    }
 
 })(window);

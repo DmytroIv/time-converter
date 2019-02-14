@@ -66,7 +66,7 @@ gulp.task('scss', function () {
 
 //js task
 gulp.task('js', function () {
-    return gulp.src('./src/js/**/*.js')
+    return gulp.src('src/js/**/*.js')
         .pipe(babel({
             presets: ['env'],
             minified: true,
@@ -81,7 +81,7 @@ gulp.task('watch', function () {
     $.livereload.listen();
 
     gulp.watch('src/scss' + '/**/*.scss', gulp.series('scss'));
-    gulp.watch('./src/js/*.js', gulp.series('js'));
+    gulp.watch('src/js/*.js', gulp.series('js'));
 });
 
 // Dev tools by default

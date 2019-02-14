@@ -14,6 +14,7 @@
 <div class="forms-wrapper" data-forms-holder>
     <div class="time-actions">
         <div class="form-add"></div>
+        <button class="time-button-save" type="button" data-save-forms-time>Save</button>
     </div>
     <div class="time-form">
         <div class="form-delete"></div>
@@ -51,47 +52,46 @@
             </div>
         </div>
     </div>
+
+    <template id="form-template">
+        <div class="time-form">
+            <div class="form-delete"></div>
+            <div class="time-row">
+                <h5>Start at</h5>
+                <div class="time-control">
+                    <label for="hour-start"><span>hours</span></label>
+                    <input type="number" id="hour-start" data-start-hours >
+                </div>
+                <div class="time-control">
+                    <label for="minutes-start"><span>minutes</span></label>
+                    <input type="number" id="minutes-start" data-start-minutes >
+                </div>
+            </div>
+            <div class="time-row">
+                <h5>Break</h5>
+                <div class="time-control">
+                    <label for="hour-break"><span>hours</span></label>
+                    <input type="number" id="hour-break" data-break-hours >
+                </div>
+                <div class="time-control">
+                    <label for="minutes-break"><span>minutes</span></label>
+                    <input type="number" id="minutes-break" data-break-minutes >
+                </div>
+            </div>
+            <div class="time-row">
+                <h5>End at</h5>
+                <div class="time-control">
+                    <label for="hour-end"><span>hours</span></label>
+                    <input type="number" id="hour-end" data-end-hours >
+                </div>
+                <div class="time-control">
+                    <label for="minutes-end"><span>minutes</span></label>
+                    <input type="number" id="minutes-end" data-end-minutes >
+                </div>
+            </div>
+        </div>
+    </template>
 </div>
-
-
-<template>
-    <div class="time-form">
-        <div class="form-delete"></div>
-        <div class="time-row">
-            <h5>Start at</h5>
-            <div class="time-control">
-                <label for="hour-start"><span>hours</span></label>
-                <input type="number" id="hour-start" data-start-hours >
-            </div>
-            <div class="time-control">
-                <label for="minutes-start"><span>minutes</span></label>
-                <input type="number" id="minutes-start" data-start-minutes >
-            </div>
-        </div>
-        <div class="time-row">
-            <h5>Break</h5>
-            <div class="time-control">
-                <label for="hour-break"><span>hours</span></label>
-                <input type="number" id="hour-break" data-break-hours >
-            </div>
-            <div class="time-control">
-                <label for="minutes-break"><span>minutes</span></label>
-                <input type="number" id="minutes-break" data-break-minutes >
-            </div>
-        </div>
-        <div class="time-row">
-            <h5>End at</h5>
-            <div class="time-control">
-                <label for="hour-end"><span>hours</span></label>
-                <input type="number" id="hour-end" data-end-hours >
-            </div>
-            <div class="time-control">
-                <label for="minutes-end"><span>minutes</span></label>
-                <input type="number" id="minutes-end" data-end-minutes >
-            </div>
-        </div>
-    </div>
-</template>
 
 <script src="js/time.js"></script>
 

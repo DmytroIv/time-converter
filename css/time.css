@@ -55,9 +55,9 @@ body {
 }
 
 .time-form {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 3px;
-  margin: 25px 0;
+  margin: 0 0 25px;
   position: relative;
   padding: 10px;
 }
@@ -110,4 +110,36 @@ body {
   -ms-flex-direction: column;
       flex-direction: column;
   margin-right: 10px;
+}
+
+.time-actions {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.time-button-save {
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+  box-shadow: none;
+  cursor: pointer;
+  color: #dddddd;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 7px 15px 5px;
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.time-button-save:hover {
+  border-color: #555555;
+  color: #555555;
+  box-shadow: 3px 3px 5px -1px rgba(100, 100, 100, 0.5);
 }
