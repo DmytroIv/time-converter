@@ -1,3 +1,20 @@
+@mixin activeBtnStates ($color, $borderColor: transparent, $boxShadow: 3px 3px 5px -1px rgba(100,100,100, 0.5)) {
+    outline: transparent;
+
+    &:hover {
+        box-shadow: $boxShadow;
+        border-color: $borderColor;
+        color: $color;
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+//
 body {
     font-family: Calibri, sans-serif;
     font-size: 20px;
@@ -25,11 +42,7 @@ body {
         overflow: hidden;
         transition: all 0.3s;
 
-        &:hover {
-            cursor: pointer;
-            opacity: 1;
-            color: #FFFFFF;
-        }
+        @include activeBtnStates(#FFFFFF);
 
         &:after {
             font-size: 2em;
@@ -137,10 +150,6 @@ body {
         text-transform: uppercase;
         transition: all 0.3s;
 
-        &:hover {
-            border-color: #555555;
-            color: #555555;
-            box-shadow: 3px 3px 5px -1px rgba(100,100,100, 0.5);
-        }
+        @include activeBtnStates(#555555, #555555);
     }
 }
